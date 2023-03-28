@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import data from './MovieDataSample.json';
+import data from './MovieData.json';
 
-const mds = data.MovieDataSample;
+const mds = data.MovieData;
 
 function MovieList() {
   const [listOMovies, setListOMovies] = useState(mds);
@@ -10,12 +10,12 @@ function MovieList() {
     setListOMovies([
       ...mds,
       {
-        MovieId: 6,
         Category: 'Comedy',
         Title: 'Sweet Home Alabama',
         Year: 1988.978303,
         Director: 'Andy Tennant',
         Rating: 'PG-13',
+        Edited: 'Yes',
       },
     ]);
   };
@@ -33,16 +33,17 @@ function MovieList() {
               <th>Director</th>
               <th>Rating</th>
               <th>Category</th>
+              <th>Edited</th>
             </tr>
           </thead>
           <tbody>
             {listOMovies.map((m) => (
-              <tr key={m.MovieId}>
-                <td>{m.Title}</td>
+              <tr key={m.Title}>
                 <td>{m.Year}</td>
                 <td>{m.Director}</td>
                 <td>{m.Rating}</td>
                 <td>{m.Category}</td>
+                <td>{m.Edited}</td>
               </tr>
             ))}
           </tbody>
