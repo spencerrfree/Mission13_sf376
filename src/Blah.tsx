@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Blah.module.css';
-
+// use this function to form the movielist page
 function TopBanner(yadda: any) {
   return (
     <React.Fragment>
