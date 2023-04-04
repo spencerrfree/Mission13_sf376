@@ -10,7 +10,7 @@ class Podcasts extends React.Component {
     return (
       <div>
         <h1>
-          This is my amazing podcast page. Check out the Baconsale site here!
+          This is my amazing podcast page! Check out the Baconsale site here!
         </h1>
         <a href="https://baconsale.com/">baconsale.com</a>
       </div>
