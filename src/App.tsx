@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import TopBanner from './Blah';
 import MovieList from './Movies';
 import { Link, Route, Routes } from 'react-router-dom';
+import NewMovieList from './Movie/movieList';
 
 // use this class to form the podcast page
 class Podcasts extends React.Component {
@@ -10,7 +11,7 @@ class Podcasts extends React.Component {
     return (
       <div>
         <h1>
-          This is my amazing podcast page! Check out the Baconsale site here!
+          This is my amazing podcast page Check out the Baconsale site here!
         </h1>
         <a href="https://baconsale.com/">baconsale.com</a>
       </div>
@@ -36,7 +37,7 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/movies" element={<MovieList />} />
+        <Route path="/movies" element={<NewMovieList />} />
         <Route
           path="/"
           element={<TopBanner saying="Joel Hilton's Mighty Quick Website" />}
