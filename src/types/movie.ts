@@ -1,6 +1,6 @@
 export type Movie = {
   movieId: number;
-  catergory: string;
+  category: string;
   title: string;
   year: number;
   director: string;

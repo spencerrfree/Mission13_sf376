@@ -19,7 +19,8 @@ namespace BetAPI.Controllers
         public IEnumerable<MovieData> Get()
         {
             return (context.Movies
-                /*.Where()*/
+                .Where(x => x.Edited == "Yes")
+                .OrderBy(x => x.Title)
                 .ToArray());
         }
 
